@@ -1,2 +1,3 @@
-# curriculo
+# Currículo
+
 Currículo pessoal
