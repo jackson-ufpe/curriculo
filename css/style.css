@@ -8,14 +8,30 @@
 body {
   margin: 0;
   padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   font-family: "APhont", sans-serif;
 }
 
-/* Preferi usar apenas tags semânticas */
+/* Avatarzinho da página inicial */
+figure {
+  margin: 0;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+figure img {
+  border-radius: 100px;
+  width: 150px;
+  height: auto;
+}
+
+/* Navegação com tags semânticas */
 nav {
   display: flex;
   justify-content: space-between;
-  overflow: hidden;
   padding: 0 10px;
   background-color: mediumseagreen;
 }
@@ -33,37 +49,68 @@ nav a:hover {
   color: black;
 }
 
-nav a.active {
-  margin-right: auto;
+nav a.ativo {
+  /* margin-right: auto; */
   background-color: steelblue;
   color: white;
 }
 
 /* Alinha os itens do menu à direita */
-.menu-right {
+.menu-direito {
   display: flex;
 }
 
-/* Centralização horizontal e vertical */
+/* Conteúdo principal */
 main {
-  display: grid;
-  place-items: center;
-  height: 50vh;
+  flex: 1;
+  padding: 20px 0;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 article {
   margin: 0 auto;
   width: 70%;
+  padding: 20px;
 }
 
-/* Formuário de contato */
+/* Lista com barras de progresso */
+li {
+  margin-bottom: 1.5rem;
+  list-style: none;
+}
+
+li::after {
+  content: attr(porcentagem);
+  float: right;
+  font-size: 0.875rem;
+}
+
+.progresso {
+  background: #eee;
+  border-radius: 4px;
+  height: 8px;
+  margin-top: 0.5rem;
+}
+
+.progresso div {
+  background: #2196F3;
+  border-radius: 4px;
+  height: 100%;
+  width: var(--total);
+}
+
+/* Formulário de contato */
 form {
+  width: 100%;
   max-width: 600px;
   margin: 20px auto;
   padding: 20px;
   border: 1px solid silver;
   border-radius: 8px;
   background-color: snow;
+  box-sizing: border-box;
 }
 
 .form-group {
@@ -80,9 +127,10 @@ input,
 textarea {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid gray;
   border-radius: 4px;
   font-size: 16px;
+  box-sizing: border-box;
 }
 
 button {
@@ -100,22 +148,33 @@ button:hover {
   color: black;
 }
 
+/* Layout em colunas */
+.linha {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -5px;
+}
+
+.coluna {
+  flex: 1;
+  padding: 5px;
+  min-width: 250px;
+}
+
+/* Footer sempre no fim da página */
 footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
   background-color: coral;
   color: white;
   text-align: center;
+  padding: 10px 0;
+  margin-top: auto;
 }
 
-/* Ajusta os links do menu nos dispositivos móveis */
+/* Responsividade */
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
-    align-items: flex-start;
-    padding: 0;
+    align-items: stretch;
   }
 
   nav a {
@@ -123,10 +182,26 @@ footer {
     width: 100%;
     text-align: left;
     font-size: 16px;
+    box-sizing: border-box;
   }
 
   .menu-right {
     flex-direction: column;
     width: 100%;
+  }
+
+  article {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .coluna {
+    flex: 100%;
+    padding: 5px;
+  }
+
+  form {
+    margin: 10px;
+    width: calc(100% - 20px);
   }
 }

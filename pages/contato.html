@@ -13,39 +13,46 @@
 <body>
 
   <nav>
-    <a class="active" href="../index.html">Jackson</a>
-    <a href="../pages/formacao.html">Formação...</a>
-    <a href="../pages/experiencia.html">Experiência...</a>
-    <a href="../pages/sobre.html">Sobre...</a>
-    <a href="../pages/contato.html">Contato</a>
+    <a href="../index.html">Jackson</a>
+    <div class="menu-direito">
+      <a href="../pages/formacao.html">Formação...</a>
+      <a href="../pages/experiencia.html">Experiência...</a>
+      <a href="../pages/sobre.html">Sobre...</a>
+      <a class="ativo" href="../pages/contato.html">Contato</a>
+    </div>
   </nav>
 
   <main>
     <article>
-      <h2>Entre em contato (ou não)...</h2>
 
-      <form id="contactForm">
-        <div class="form-group">
-          <label for="name">Seu nome:</label>
-          <input type="text" id="name" name="name" placeholder="Seu nome completo" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Seu e-mail:</label>
-          <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
-        </div>
-        <div class="form-group">
-          <label for="message">Sua mensagem:</label>
-          <textarea id="message" name="message" rows="5" placeholder="Sua mensagem" required></textarea>
-        </div>
-        <button type="submit">Enviar</button>
-      </form>
+      <header>
+        <h2>Entre em contato (ou não)...</h2>
+      </header>
+
+      <section>
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="name">Seu nome:</label>
+            <input type="text" id="name" name="name" placeholder="Seu nome completo" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Seu e-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Sua mensagem:</label>
+            <textarea id="message" name="message" rows="5" placeholder="Sua mensagem" required></textarea>
+          </div>
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
 
     </article>
 
   </main>
 
   <footer>
-    <p>&#9400; Copyleft 2024 - Todos os direitos invertidos.</p>
+    <p>&#9400; Copyleft 2024 - Jackson de Jesus.</p>
   </footer>
 
   <script src="../js/script.js"></script>
