@@ -5,6 +5,8 @@
   font-display: swap;
 }
 
+/* Acho menos difícil usar as cores pelo nome, sempre consulto neste link:
+https://www.w3schools.com/colors/colors_names.asp */
 body {
   margin: 0;
   padding: 0;
@@ -50,7 +52,6 @@ nav a:hover {
 }
 
 nav a.ativo {
-  /* margin-right: auto; */
   background-color: steelblue;
   color: white;
 }
@@ -60,7 +61,7 @@ nav a.ativo {
   display: flex;
 }
 
-/* Conteúdo principal */
+/* Conteúdo principal centralizado*/
 main {
   flex: 1;
   padding: 20px 0;
@@ -75,7 +76,7 @@ article {
   padding: 20px;
 }
 
-/* Lista com barras de progresso */
+/* Lista com barrinhas de progresso */
 li {
   margin-bottom: 1.5rem;
   list-style: none;
